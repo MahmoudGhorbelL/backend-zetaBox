@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3002:3001'
+    restart: on-failure
+    container_name: backend-cont
+    volumes:
+      - /app/node_modules
